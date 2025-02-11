@@ -33,8 +33,6 @@ public class Product {
 	joinColumns = @JoinColumn(name = "product_id"),
 	inverseJoinColumns = @JoinColumn(name = "category_id"))
 	private Set<Category> categories = new HashSet<>();
-	
-	private List<Order> orders = new ArrayList<>();
 
 	public Product(Long id, String name, String description, Double price, String imgUrl) {
 		super();
@@ -87,10 +85,6 @@ public class Product {
 
 	public Set<Category> getCategories() {
 		return categories;
-	}
-
-	public List<Order> getOrders() {
-		return orders;
 	}
 
 	@Override

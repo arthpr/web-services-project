@@ -13,14 +13,14 @@ import com.arthpr.coursejava.repositories.OrderRepository;
 public class OrderService {
 
 	@Autowired
-	private OrderRepository urep;
+	private OrderRepository orep;
 	
 	public List<Order> findAll() {
-		return urep.findAll();
+		return orep.findAll();
 	}
 	
 	public Order findById(Long id) {
-		Optional<Order> obj = urep.findById(id);
+		Optional<Order> obj = orep.findById(id);
 		return obj.get();
 	}
 }
