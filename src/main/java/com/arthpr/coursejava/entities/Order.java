@@ -2,6 +2,8 @@ package com.arthpr.coursejava.entities;
 
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import com.arthpr.coursejava.enums.OrderStatus;
@@ -32,6 +34,8 @@ public class Order implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "client_id")
 	private User client;
+	
+	private List<Product> products = new ArrayList<>();
 	
 	public Order() {	
 	}
