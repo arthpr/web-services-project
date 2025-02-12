@@ -1,5 +1,6 @@
 package com.arthpr.coursejava.entities;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 import com.arthpr.coursejava.entities.pk.OrderItemPK;
@@ -11,7 +12,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "tb_order_item")
-public class OrderItem {
+public class OrderItem implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@EmbeddedId
